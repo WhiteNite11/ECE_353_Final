@@ -32,7 +32,70 @@ extern void initPortC(void);
  GPIO_PORT *GpioPortD = (GPIO_PORT *)PORTD;
  GPIO_PORT *GpioPortE = (GPIO_PORT *)PORTE;
  GPIO_PORT *GpioPortF = (GPIO_PORT *)PORTF;
- 
+
+/******************************************************************************
+ * Functions
+ *****************************************************************************/
+//*****************************************************************************
+// Initialize the GPIO port
+//*****************************************************************************
+bool  gpioPortInit( 
+                    uint32_t baseAddress, 
+                    uint8_t digitalEnableMask, 
+                    uint8_t inputMask,
+					uint8_t outputMask, 
+                    uint8_t pullUpMask
+                  )
+{
+  uint32_t delay;
+  GPIO_PORT *myPort = (GPIO_PORT *)baseAddress;
+  
+  // Validate that a correct base address has been passed
+  // Turn on the Clock Gating Register
+  switch (baseAddress) 
+  {
+    case PORTA :
+      SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
+      break;
+    case PORTB :
+      SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
+      break;
+    case PORTC :
+      SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R2;
+      break;
+    case PORTD :
+      SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R3;
+      break;
+    case PORTE :
+      SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
+      break;
+    case PORTF :
+      SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
+      break;
+    default:
+      return false;
+  }
+
+  // Delay a bit
+  delay = SYSCTL_RCGCGPIO_R;
+  
+  // Set the Direction Register
+  myPort->Direction                   &= ~inputMask;
+  myPort->Direction					  |= outputMask;
+  
+  // Enable Pull-Up Resistors
+  myPort->PullUpSelect                |= pullUpMask;
+  
+  // Disable the Alternate Function Select
+  myPort->AlternateFunctionSelect     = 0;
+  
+  // Enable Pins as Digital Pins
+  myPort->DigitalEnable               |= digitalEnableMask;
+  
+  return true;
+}
+
+//*****************************************************************************
 
 //*****************************************************************************
 //*****************************************************************************
