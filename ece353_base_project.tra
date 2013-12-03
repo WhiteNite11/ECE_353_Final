@@ -1,0 +1,22 @@
+*** Creating Trace Output File 'ece353_base_project.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup.o"'
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '".\lib\pll.lib"'
+### List of Objects: adding '".\lib\portC_init.lib"'
+### ADS-LD Command completed:
+--cpu Cortex-M4.fp "startup.o" "main.o" C:\Users\jkrachey\SkyDrive\ECE353\svn\trunk\hw\2013-Fall\Project\dist\lib\pll.lib C:\Users\jkrachey\SkyDrive\ECE353\svn\trunk\hw\2013-Fall\Project\dist\lib\portC_init.lib --library_type=microlib --strict --scatter ".\ece353.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\ece353_base_project.map" -o "ece353_base_project.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'ece353_base_project.axf'
+### ADS-LD Command File: 'ece353_base_project.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'ece353_base_project.lnp', Handle=0x00000598
+### Writing '.lnp' file
+### ADS-LD Command file 'ece353_base_project.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
