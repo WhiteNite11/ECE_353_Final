@@ -3,11 +3,11 @@
 <title>Static Call Graph - [C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\ece353_base_project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\ece353_base_project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 791]: Last Updated: Mon Dec 02 23:01:01 2013
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 791]: Last Updated: Wed Dec 04 12:18:19 2013
 <BR><P>
-<H3>Maximum Stack Usage =          8 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        108 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main
+main &rArr; gpioPortInit
 <P>
 <H3>
 Functions with no stack information
@@ -30,67 +30,135 @@ Mutually Recursive functions
 Function Pointers
 </H3><UL>
  <LI><a href="#[2]">FaultISR</a> from startup.o(RESET) referenced from startup.o(RESET)
- <LI><a href="#[3]">IntDefaultHandler</a> from startup.o(RESET) referenced 51 times from startup.o(RESET)
+ <LI><a href="#[3]">IntDefaultHandler</a> from startup.o(RESET) referenced 118 times from startup.o(RESET)
  <LI><a href="#[1]">NmiSR</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[0]">Reset_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
- <LI><a href="#[4]">main</a> from main.o(.text) referenced from entry8.o(.ARM.Collect$$$$00000009)
+ <LI><a href="#[4]">SYSTICKIntHandler</a> from systick.o(.text) referenced from startup.o(RESET)
+ <LI><a href="#[5]">TIMER0IntHandler</a> from systick.o(.text) referenced 2 times from startup.o(RESET)
+ <LI><a href="#[6]">main</a> from main.o(.text) referenced from entry8.o(.ARM.Collect$$$$00000009)
 </UL>
 <P>
 <H3>
 Global Symbols
 </H3>
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
-<BR><BR>[Calls]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<BR><BR>[Calls]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[5]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<P><STRONG><a name="[7]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
 </UL>
 
-<P><STRONG><a name="[b]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[16]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
-<P><STRONG><a name="[6]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[8]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[a]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[15]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[c]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[17]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[d]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8.o(.ARM.Collect$$$$00000009))
+<P><STRONG><a name="[18]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8.o(.ARM.Collect$$$$00000009))
 
-<P><STRONG><a name="[4]"></a>main</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = main
+<P><STRONG><a name="[f]"></a>gpioPortInit</STRONG> (Thumb, 226 bytes, Stack size 20 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpioPortInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initPortC
-<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[12]"></a>displayLEDChar</STRONG> (Thumb, 740 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[13]"></a>debounce</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = debounce
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[14]"></a>checkPB</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[a]"></a>ADCInit</STRONG> (Thumb, 160 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADCInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickSleep
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[11]"></a>GetADCval</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[6]"></a>main</STRONG> (Thumb, 694 bytes, Stack size 88 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = main &rArr; gpioPortInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initPortC
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSTICKConfig
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetADCval
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCInit
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkPB
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debounce
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayLEDChar
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpioPortInit
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry8.o(.ARM.Collect$$$$00000009)
 </UL>
-<P><STRONG><a name="[8]"></a>PLL_Init</STRONG> (Thumb, 134 bytes, Stack size 0 bytes, pll.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[5]"></a>TIMER0IntHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, systick.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[4]"></a>SYSTICKIntHandler</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, systick.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[10]"></a>SYSTICKConfig</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, systick.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9]"></a>initPortC</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, portc_init.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[b]"></a>sysTickSleep</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, systick.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCInit
 </UL>
 
-<P><STRONG><a name="[7]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+<P><STRONG><a name="[d]"></a>PLL_Init</STRONG> (Thumb, 134 bytes, Stack size 0 bytes, pll.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[e]"></a>initPortC</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, portc_init.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
 
-<P><STRONG><a name="[f]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[19]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[10]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[c]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
 
-<P><STRONG><a name="[11]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[1a]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[9]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+</UL>
+
+<P><STRONG><a name="[1b]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[1c]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[1d]"></a>__decompress1</STRONG> (Thumb, 92 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[1e]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[1f]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[20]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols

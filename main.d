@@ -10,3 +10,4 @@ main.o: gpio.h
 main.o: UART.h
 main.o: C:\Keil\ARM\RV31\INC\errno.h
 main.o: team.h
+main.o: led_chars.h
