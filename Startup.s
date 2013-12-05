@@ -120,7 +120,7 @@ __Vectors
         DCD     IntDefaultHandler           ; ADC Sequence 3
         DCD     IntDefaultHandler           ; Watchdog timer
         DCD     TIMER0IntHandler            ; Timer 0 subtimer A
-        DCD     TIMER0IntHandler           ; Timer 0 subtimer B
+        DCD     TIMER0IntHandler            ; Timer 0 subtimer B
         DCD     IntDefaultHandler           ; Timer 1 subtimer A
         DCD     IntDefaultHandler           ; Timer 1 subtimer B
         DCD     IntDefaultHandler           ; Timer 2 subtimer A

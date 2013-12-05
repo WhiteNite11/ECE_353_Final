@@ -47,7 +47,9 @@
  
  volatile bool refreshLED = false;
  volatile bool checkADC;
- volatile uint32_t brightness = 1;
+ volatile uint32_t pwm = 0;
+ volatile bool nextLEDrow = false;
+ volatile bool buttonPoll = false;
 //*****************************************************************************
 // External Functions
 //*****************************************************************************
@@ -118,17 +120,18 @@ bool  gpioPortInit(
 // Display the LED character
 //*****************************************************************************
 void displayLEDChar(uint8_t symbol, uint8_t color){
-	static uint8_t rowIndex = 0;
-	static uint8_t charIndex = 0;
-	// Activate rowIndex 
+  static uint8_t rowIndex = 0;
+  static uint8_t charIndex = 0;
+  static uint8_t currPWM = 0;
+  // Activate rowIndex 
   GpioPortC->Data = ROW_EN;
   GpioPortB->Data = ~(1 << rowIndex);
   GpioPortC->Data = ENABLES_OFF;
 	
-	// Disable all Outputs
+  // Disable all Outputs
   GpioPortF->Data |= ~OUTPUT_ENABLE_B;
 
-	// CLEAR LEDs
+  // CLEAR LEDs
   GpioPortC->Data = RED_EN;
   GpioPortB->Data = 0xFF;
   GpioPortC->Data = ENABLES_OFF;
@@ -138,67 +141,76 @@ void displayLEDChar(uint8_t symbol, uint8_t color){
   GpioPortC->Data = GREEN_EN;
   GpioPortB->Data = 0xFF;
   GpioPortC->Data = ENABLES_OFF;
-	
-	// Set color LEDs
-  //RED
-  if(color == 0){
-  GpioPortC->Data = RED_EN;
-  GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+
+  //Turn on LEDs only if pwm allows it
+  currPWM++;
+  if(currPWM == 100)
+  	currPWM = 0;
+  if(currPWM < pwm){
+	  // Set color LEDs
+	  //RED
+	  if(color == 0){
+	  GpioPortC->Data = RED_EN;
+	  GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+	  }
+	  //YEllOW
+	  else if (color == 1){
+	    GpioPortC->Data = RED_EN;
+	    GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+		GpioPortC->Data = GREEN_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+	  }
+	  //GREEN
+	  else if (color == 2){
+		GpioPortC->Data = GREEN_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+	  }
+	  //BLUE
+	  else if (color == 3){
+		GpioPortC->Data = BLUE_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+	  }
+	  //INDIGO
+	  else if (color == 4){
+		GpioPortC->Data = GREEN_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+		GpioPortC->Data = BLUE_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+	  }
+	  //PURPLE
+	  else if (color == 5){
+		GpioPortC->Data = BLUE_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+		GpioPortC->Data = RED_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+	  }
+	  //White
+	  else if (color == 6){
+		GpioPortC->Data = RED_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+		GpioPortC->Data = BLUE_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+		GpioPortC->Data = GREEN_EN;
+	  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
+	  }	
+	  GpioPortC->Data = ENABLES_OFF;
   }
-  //YEllOW
-  else if (color == 1){
-    GpioPortC->Data = RED_EN;
-    GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-	GpioPortC->Data = GREEN_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-  }
-  //GREEN
-  else if (color == 2){
-	GpioPortC->Data = GREEN_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-  }
-  //BLUE
-  else if (color == 3){
-	GpioPortC->Data = BLUE_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-  }
-  //INDIGO
-  else if (color == 4){
-	GpioPortC->Data = GREEN_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-	GpioPortC->Data = BLUE_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-  }
-  //PURPLE
-  else if (color == 5){
-	GpioPortC->Data = BLUE_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-	GpioPortC->Data = RED_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-  }
-  //White
-  else if (color == 6){
-	GpioPortC->Data = RED_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-	GpioPortC->Data = BLUE_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-	GpioPortC->Data = GREEN_EN;
-  	GpioPortB->Data = ~(ucDispChar[symbol][charIndex]);
-  }	
-  GpioPortC->Data = ENABLES_OFF;
-	// Enable All Output
+  // Enable All Output
   GpioPortF->Data &= OUTPUT_ENABLE_B;
 	
 	//Increment the current row index to turn on
-	if (rowIndex == 7)
-		rowIndex = 0;
-	else
+	if(nextLEDrow){
+	  nextLEDrow = false;
+	  if (rowIndex == 7)
+	  	rowIndex = 0;
+	  else
 		rowIndex++;
-	//Increment the LEDchars that turn on
-	if (charIndex == 7)
+	  //Increment the LEDchars that turn on
+	  if (charIndex == 7)
 		charIndex = 0;
-	else
-		charIndex++;
+	  else
+		charIndex++; 
+	}
 }
 
 //*****************************************************************************
@@ -295,7 +307,6 @@ uint32_t GetADCval(uint32_t Channel)
 
   return result;
 }
-
 int 
 main(void)
 {
@@ -345,61 +356,67 @@ main(void)
   gpioPortInit(PORTA, 0xC0, 0xC0, 0x00, 0xC0);
   //Configure Port D SW4 and SW5 as inputs
   gpioPortInit(PORTD, 0x0C, 0x0C, 0x00, 0x0C);
-
-  //Configure the SYSTICK timer
-  SYSTICKConfig(80000, true);
+  
+  //Configure Timer0 1mS ticks
+  TIMER0Config(80000);
+  
+  //Configure the SYSTICK timer 12.5uS ticks
+  SYSTICKConfig(1000, true);
+  
   //Init ADC
   ADCInit();
   //Get initial ADC values
-  ADCval1 = GetADCval(POT_RIGHT) / 1000;
+  pwm = GetADCval(POT_RIGHT) / 40;
   ADCval2 = GetADCval(POT_LEFT) / 575;
   
   while(1)
   {
 	if(checkADC){
-	 ADCval1 = GetADCval(POT_RIGHT) / 1000;
+	 pwm = GetADCval(POT_RIGHT) / 40;
 	 ADCval2 = GetADCval(POT_LEFT) / 600;
-	 if(ADCval1 == 0)
-	 	brightness = 1;
-	 else if(ADCval1 == 1)
-		brightness = 5;
-	 else if(ADCval1 == 2)
-		brightness = 10;
-	 else if(ADCval1 >= 3)
-	 	brightness = 15;
+//	 if(ADCval1 == 0)
+//	 	brightness = 1;
+//	 else if(ADCval1 == 1)
+//		brightness = 5;
+//	 else if(ADCval1 == 2)
+//		brightness = 10;
+//	 else if(ADCval1 >= 3)
+//	 	brightness = 15;
 
 	 checkADC = false;
 	}
 
     //On systick interrupt display the current character and poll the buttons
     if (refreshLED){
-			if (displayMode){
-				displayLEDChar(displayArray[currIndex], ADCval2);
-			}
-			else{
-				displayLEDChar(inputArray[inputIndex], BLUE_EN);
-			}
-			refreshLED = false;
+		if (displayMode){
+			displayLEDChar(displayArray[currIndex], ADCval2);
+		}
+		else{
+			displayLEDChar(inputArray[inputIndex], ADCval2);
+		}
+		refreshLED = false;
+	}
+	if (buttonPoll){
+		//Check if any buttons have been pushed
+		//If so debounce them 
+		buttonPoll = false;
+		//SW2
+		shiftRegSW2 = debounce(PORTA, SW2, shiftRegSW2);
+		upPB = checkPB(shiftRegSW2);
+		//SW3	
+		shiftRegSW3 = debounce(PORTA, SW3, shiftRegSW3);
+		rightPB = checkPB(shiftRegSW3);			
+		//SW4
+		shiftRegSW4 = debounce(PORTD, SW4, shiftRegSW4);
+		downPB = checkPB(shiftRegSW4);
+		//SW5
+		shiftRegSW5 = debounce(PORTD, SW5, shiftRegSW5);	
+		leftPB = checkPB(shiftRegSW5);
+		//SW6
+		shiftRegSW6 = debounce(PORTF, SW6, shiftRegSW6);
+		modePB = checkPB(shiftRegSW6);
 
-			//Check if any buttons have been pushed
-			//If so debounce them 
-			//SW2
-			shiftRegSW2 = debounce(PORTA, SW2, shiftRegSW2);
-			upPB = checkPB(shiftRegSW2);
-			//SW3	
-			shiftRegSW3 = debounce(PORTA, SW3, shiftRegSW3);
-			rightPB = checkPB(shiftRegSW3);			
-			//SW4
-			shiftRegSW4 = debounce(PORTD, SW4, shiftRegSW4);
-			downPB = checkPB(shiftRegSW4);
-			//SW5
-			shiftRegSW5 = debounce(PORTD, SW5, shiftRegSW5);	
-			leftPB = checkPB(shiftRegSW5);
-			//SW6
-			shiftRegSW6 = debounce(PORTF, SW6, shiftRegSW6);
-			modePB = checkPB(shiftRegSW6);
-
-		}//End polling
+	}//End polling
 		
 		//Display Mode
 		if (displayMode){
