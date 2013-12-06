@@ -121,10 +121,6 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
-          <Key>DLGUARM</Key>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
           <Key>DLGTARM</Key>
           <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
@@ -202,10 +198,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>22</ColumnNumber>
+      <ColumnNumber>98</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>354</TopLine>
-      <CurrentLine>360</CurrentLine>
+      <TopLine>483</TopLine>
+      <CurrentLine>494</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -216,13 +212,27 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>20</ColumnNumber>
+      <ColumnNumber>17</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>13</TopLine>
-      <CurrentLine>14</CurrentLine>
+      <TopLine>91</TopLine>
+      <CurrentLine>102</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\systick.c</PathWithFileName>
       <FilenameWithoutPath>systick.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>0</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>1</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>5</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>13</TopLine>
+      <CurrentLine>27</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\uartPoll.c</PathWithFileName>
+      <FilenameWithoutPath>uartPoll.c</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -262,9 +272,9 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\led_chars.h</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>1</CurrentLine>
+    <PathWithFilename>C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\lm4f120h5qr.h</PathWithFilename>
+    <TopLine>42</TopLine>
+    <CurrentLine>51</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -288,9 +298,9 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\lm4f120h5qr.h</PathWithFilename>
-    <TopLine>3128</TopLine>
-    <CurrentLine>3128</CurrentLine>
+    <PathWithFilename>C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\led_chars.h</PathWithFilename>
+    <TopLine>13</TopLine>
+    <CurrentLine>19</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -339,13 +349,115 @@
     </WindowPosition>
   </AlienFiles>
 
+  <AlienFiles>
+    <PathWithFilename>C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\SPI.h</PathWithFilename>
+    <TopLine>46</TopLine>
+    <CurrentLine>46</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\uartPoll.h</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>11</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\UART.h</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>18</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
   <MDIGroups>
     <Orientation>1</Orientation>
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>2</ActiveTab>
+      <ActiveTab>5</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>led_chars.h</Name>
+          <ColumnNumber>25</ColumnNumber>
+          <TopLine>13</TopLine>
+          <CurrentLine>19</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>UART.h</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>18</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\uartPoll.c</Name>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>13</TopLine>
+          <CurrentLine>27</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>uartPoll.h</Name>
+          <ColumnNumber>74</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>11</CurrentLine>
+        </Doc>
         <Doc>
           <Name>board_config.h</Name>
           <ColumnNumber>41</ColumnNumber>
@@ -354,21 +466,15 @@
         </Doc>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>22</ColumnNumber>
-          <TopLine>354</TopLine>
-          <CurrentLine>360</CurrentLine>
+          <ColumnNumber>49</ColumnNumber>
+          <TopLine>492</TopLine>
+          <CurrentLine>492</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\systick.c</Name>
-          <ColumnNumber>20</ColumnNumber>
-          <TopLine>13</TopLine>
-          <CurrentLine>14</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>led_chars.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
+          <ColumnNumber>17</ColumnNumber>
+          <TopLine>91</TopLine>
+          <CurrentLine>102</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\Startup.s</Name>
@@ -378,9 +484,15 @@
         </Doc>
         <Doc>
           <Name>lm4f120h5qr.h</Name>
-          <ColumnNumber>8</ColumnNumber>
-          <TopLine>3128</TopLine>
-          <CurrentLine>3128</CurrentLine>
+          <ColumnNumber>25</ColumnNumber>
+          <TopLine>42</TopLine>
+          <CurrentLine>51</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>SPI.h</Name>
+          <ColumnNumber>37</ColumnNumber>
+          <TopLine>46</TopLine>
+          <CurrentLine>46</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

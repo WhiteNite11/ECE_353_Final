@@ -5,11 +5,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 #include "lm4f120h5qr.h"
 #include "board_config.h"
 #include "team.h"
 #include "led_chars.h"
 #include "gpio.h"
+#include "SPI.h"
+#include "uartPoll.h"
+
 /******************************************************************************
  * Defines
  *****************************************************************************/
@@ -35,6 +39,9 @@
 
 #define POT_LEFT  1
 #define POT_RIGHT 0
+
+#define PHASE   1
+#define POLARITY 1
 /******************************************************************************
  * Global Variables
  *****************************************************************************/
@@ -59,6 +66,165 @@ extern void initPortC(void);
 /******************************************************************************
  * Functions
  *****************************************************************************/
+//*****************************************************************************
+// Configure UART0 for Tx and Rx from computer
+//*****************************************************************************
+bool uartInitPolling(uint32_t base)
+{
+  uint32_t delay;
+  UART_PERIPH *myUart;
+  
+  if ( base != UART0)
+    return false;
+  
+  // *******************************************
+  // Configure GPIO PA0 and PA1 to be UART Pins
+  // *******************************************
+  
+  // Turn on the clock gating register for GPIO port A
+  // Make sure not to turn of any of the other ports
+  SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
+  
+  delay = SYSCTL_RCGCGPIO_R;
+  
+  // Set the Digital Enable
+  GpioPortA->DigitalEnable |= PIN_0 | PIN_1;
+  
+  // Set the Alternate Function
+  GpioPortA->AlternateFunctionSelect |=  PIN_0 | PIN_1;
+  
+  // Set the Port Control Register
+  GpioPortA->PortControl |= GPIO_PCTL_PA0_U0RX | GPIO_PCTL_PA1_U0TX;
+  
+  
+  // *******************************
+  // Set up the UART registers
+  // *******************************
+  myUart = (UART_PERIPH *)base;
+  
+  // Eanble the clock gating register
+  // ( Not found in the UART_PERIPH struct)
+  SYSCTL_RCGCUART_R |= SYSCTL_RCGCUART_R0;
+  
+  delay = SYSCTL_RCGCUART_R;
+  
+  // Set the baud rate for 115200
+  myUart->IntegerBaudRateDiv = 43;
+  myUart->FracBaudRateDiv = 26;
+
+  // Configure the Line Control for 8-n-1
+  myUart->LineControl = UART_LCRH_WLEN_8 | UART_LCRH_FEN;
+  
+  // Enable the UART - Need to enabel both TX and RX
+  myUart->UARTControl = UART_CTL_UARTEN | UART_CTL_RXE | UART_CTL_TXE ;
+  
+  // Wait until the UART is avaiable
+  while( !(SYSCTL_PRUART_R & SYSCTL_PRUART_R0 ))
+  {}
+  
+  delay = 500;
+  while( delay != 0)
+  {
+    delay--;
+  }
+  
+  return true;
+}
+
+
+//***************************************************************************
+// This routine returns a character received from the UART/COM port.
+// This routine blocks until a character is received
+//***************************************************************************/
+char uartRxPoll(uint32_t base)
+{
+  UART_PERIPH *myPeriph = (UART_PERIPH *)base;
+  
+  while(myPeriph->Flag & UART_FR_RXFE)
+  {
+    // Wait
+  }
+   return myPeriph->Data;
+}
+
+// *******************************************
+// Configure GPIO PA5-PA2 as SPI
+// *******************************************
+void initializePortASpi0(void)
+{
+  uint32_t delay;
+  
+  // Turn on the clock gating register for GPIO port A
+  // Make sure not to turn of any of the other ports
+  SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
+  
+  // Delay while clock starts up
+  delay = SYSCTL_RCGCGPIO_R;
+  
+  // Set the 4 pins used for the SPI interface in the Digital Enable Register
+  GpioPortA->DigitalEnable |= PIN_5 | PIN_4 | PIN_3 | PIN_2;
+  
+  // Set the 4 pins used for the SPI interface in the Alternate Function Register
+  GpioPortA->AlternateFunctionSelect |=  PIN_5 | PIN_4 | PIN_3 | PIN_2;
+  
+  // Set the Port Control Register ( See lm4f120h5qr.h starting at line 2045)
+  GpioPortA->PortControl |= GPIO_PCTL_PA5_SSI0TX | GPIO_PCTL_PA4_SSI0RX | GPIO_PCTL_PA3_SSI0FSS | GPIO_PCTL_PA2_SSI0CLK;
+  
+}
+
+// *******************************************
+// Configure SPI
+// *******************************************
+bool initializeSPI( uint32_t base, uint8_t phase, uint8_t polarity)
+{
+  uint32_t delay;
+  SPI_PERIPH *myPeriph = (SPI_PERIPH *)base;
+
+  // Turn on the Clock Gating Register
+  switch (base) 
+  {
+    case SSI0 :
+    {
+      // Configure GPIO Port A to support SSI0/SPI0
+      initializePortASpi0();
+      SYSCTL_RCGCSSI_R |= SYSCTL_RCGCSSI_R0;
+        break;
+    }
+    default:
+        return false;
+  }
+  
+  delay = SYSCTL_RCGCSSI_R;
+
+  // Disable the SSI interface
+  myPeriph->SSICR1 &= ~SSI_CR1_SSE;
+
+  // Enable Master Mode
+  myPeriph->SSICR1 &= ~SSI_CR1_MS;
+  
+  // Assume that we hvae a 80MHz clock and want a 4MHz SPI clock
+  // FSSIClk = FSysClk / (CPSDVSR * (1 + SCR))
+  myPeriph->SSICPSR = SPI_CLK_CPSDVSR;
+  myPeriph->SSICR0  &=  ~SSI_CR0_SCR_M; // Set SCR to 0
+  
+  // Cleare the phse and polarity bits
+  myPeriph->SSICR0  &=  ~(SSI_CR0_SPH | SSI_CR0_SPO);
+  
+  if (phase == 1)
+      myPeriph->SSICR0  |= SSI_CR0_SPH;
+  
+  if (polarity ==1)
+      myPeriph->SSICR0  |= SSI_CR0_SPO;
+
+  // Freescale SPI Mode with 8-Bit data
+  myPeriph->SSICR0  = ( myPeriph->SSICR0 & ~( SSI_CR0_FRF_M | SSI_CR0_DSS_M ))  | ( SSI_CR0_FRF_MOTO | SSI_CR0_DSS_8); 
+  
+  //Enable SSI
+  myPeriph->SSICR1 |= SSI_CR1_SSE;
+
+  return true;
+}
+
 //*****************************************************************************
 // Initialize the GPIO port
 //*****************************************************************************
@@ -120,7 +286,7 @@ bool  gpioPortInit(
 // Display the LED character
 //*****************************************************************************
 void displayLEDChar(uint8_t symbol, uint8_t color){
-  static uint8_t rowIndex = 0;
+  static uint8_t rowIndex = 7;
   static uint8_t charIndex = 0;
   static uint8_t currPWM = 0;
   // Activate rowIndex 
@@ -201,10 +367,10 @@ void displayLEDChar(uint8_t symbol, uint8_t color){
 	//Increment the current row index to turn on
 	if(nextLEDrow){
 	  nextLEDrow = false;
-	  if (rowIndex == 7)
-	  	rowIndex = 0;
+	  if (rowIndex == 0)
+	  	rowIndex = 7;
 	  else
-		rowIndex++;
+		rowIndex--;
 	  //Increment the LEDchars that turn on
 	  if (charIndex == 7)
 		charIndex = 0;
@@ -325,11 +491,11 @@ main(void)
 	uint16_t shiftRegSW5 = 0xFFFF;
 	uint16_t shiftRegSW6 = 0xFFFF;
 	//Initial display message
-  uint8_t displayArray [SAVED_MSG_LEN_MAX] = {12, 13, 10, 11, 10, 3, 5, 3};
+  uint8_t displayArray [SAVED_MSG_LEN_MAX] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
   uint8_t inputArray [17] =
 		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
   //Mark the indexcies of the array
-	uint8_t endIndex = 7;
+	uint8_t endIndex = 19;
 	uint8_t currIndex = 0;
 	uint8_t inputIndex = 0;
 	uint8_t tempIndex = 0;
@@ -337,10 +503,13 @@ main(void)
 	bool overflow = false;
 	//Init color
   uint8_t color;
-
+  //ADCval1
   uint32_t ADCval1 = 0;
   uint32_t ADCval2 = 0;
-
+  //Current string
+  char myString[21];
+  char myChar;
+  int8_t stringIndex=-1;
 
   // Initialize the PLLs so the the main CPU frequency is 80MHz
   PLL_Init();
@@ -357,32 +526,35 @@ main(void)
   //Configure Port D SW4 and SW5 as inputs
   gpioPortInit(PORTD, 0x0C, 0x0C, 0x00, 0x0C);
   
+  // Initialize SPI0 interface
+  initializeSPI(SSI0, PHASE, POLARITY);
+  
   //Configure Timer0 1mS ticks
   TIMER0Config(80000);
-  
+  //Configure watchdog with 1s reset
+  WatchdogTIMERConfig();
   //Configure the SYSTICK timer 12.5uS ticks
   SYSTICKConfig(1000, true);
-  
+  //Initialize UART0 and wait a bit
+  uartInitPolling(UART0);
+  sysTickSleep(1);
   //Init ADC
   ADCInit();
   //Get initial ADC values
   pwm = GetADCval(POT_RIGHT) / 40;
   ADCval2 = GetADCval(POT_LEFT) / 575;
   
+  
+  // Print out the current string
+  uartTxPollString(UART0,"\n\r\n\rCurrent Greeint Message: ");
+  uartTxPollString(UART0,"hello");
+  uartTxPollString(UART0,"\n\r");
+
   while(1)
   {
 	if(checkADC){
 	 pwm = GetADCval(POT_RIGHT) / 40;
 	 ADCval2 = GetADCval(POT_LEFT) / 600;
-//	 if(ADCval1 == 0)
-//	 	brightness = 1;
-//	 else if(ADCval1 == 1)
-//		brightness = 5;
-//	 else if(ADCval1 == 2)
-//		brightness = 10;
-//	 else if(ADCval1 >= 3)
-//	 	brightness = 15;
-
 	 checkADC = false;
 	}
 

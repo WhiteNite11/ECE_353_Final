@@ -11,345 +11,16 @@ Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
 main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(248): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(355): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(330): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-ece353_base_project.axf: Error: L6218E: Undefined symbol TIMER0IntHandler (referred from startup.o).
-Target not created
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(248): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(355): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(330): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3212 RO-data=72 RW-data=204 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(248): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(355): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(330): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3212 RO-data=72 RW-data=204 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3304 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-systick.c(36): error:  #65: expected a ";"
-Target not created
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-systick.c(36): error:  #65: expected a ";"
-Target not created
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3352 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3356 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3356 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3356 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(350): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(328): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3304 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 4 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(351): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-systick.c(31): error:  #20: identifier "loadval" is undefined
-Target not created
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(351): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3364 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(351): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3364 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(351): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3376 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(352): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3376 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(352): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3400 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(352): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-systick.c(33): error:  #109: expression must have (pointer-to-) function type
-Target not created
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(352): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3448 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(352): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3448 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(71): warning:  #550-D: variable "delay" was set but never used
-main.c(246): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(349): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(352): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(327): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=3448 RO-data=72 RW-data=328 ZI-data=256  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
 main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
 main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(378): error:  #20: identifier "brightness" is undefined
-main.c(339): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-systick.c(17): error:  #20: identifier "uint8t_t" is undefined
-Target not created
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(378): error:  #20: identifier "brightness" is undefined
-main.c(339): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-Target not created
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(362): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
 main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
 main.c(339): warning:  #550-D: variable "color" was set but never used
 main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
 compiling systick.c...
 linking...
-Program Size: Code=3540 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4220 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 7 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -361,26 +32,14 @@ compiling main.c...
 main.c(73): warning:  #550-D: variable "delay" was set but never used
 main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
 main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(362): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
 main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
 main.c(339): warning:  #550-D: variable "color" was set but never used
 main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
 compiling systick.c...
 linking...
-Program Size: Code=3548 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=3548 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4212 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 7 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -392,67 +51,14 @@ compiling main.c...
 main.c(73): warning:  #550-D: variable "delay" was set but never used
 main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
 main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(362): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
 main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
 main.c(339): warning:  #550-D: variable "color" was set but never used
 main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
 compiling systick.c...
 linking...
-Program Size: Code=4160 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4160 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=3648 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4152 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4212 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 7 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -462,100 +68,717 @@ Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
 main.c(72): warning:  #550-D: variable "delay" was set but never used
-main.c(257): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(360): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(363): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(394): error:  #165: too few arguments in function call
-main.c(338): warning:  #550-D: variable "color" was set but never used
+main.c(97): warning:  #550-D: variable "delay" was set but never used
+main.c(156): warning:  #550-D: variable "delay" was set but never used
+main.c(341): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(447): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(449): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(451): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(422): warning:  #550-D: variable "color" was set but never used
+main.c(424): warning:  #177-D: variable "ADCval1" was declared but never referenced
 compiling systick.c...
+linking...
+Program Size: Code=4488 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(72): warning:  #550-D: variable "delay" was set but never used
+main.c(97): warning:  #550-D: variable "delay" was set but never used
+main.c(156): warning:  #550-D: variable "delay" was set but never used
+main.c(341): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(447): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(449): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(451): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(422): warning:  #550-D: variable "color" was set but never used
+main.c(424): warning:  #177-D: variable "ADCval1" was declared but never referenced
+compiling systick.c...
+linking...
+Program Size: Code=4488 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(188): warning:  #550-D: variable "delay" was set but never used
+main.c(213): warning:  #550-D: variable "delay" was set but never used
+main.c(272): warning:  #550-D: variable "delay" was set but never used
+main.c(457): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(564): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(566): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(568): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(538): warning:  #550-D: variable "color" was set but never used
+main.c(540): warning:  #177-D: variable "ADCval1" was declared but never referenced
+compiling systick.c...
+linking...
+Program Size: Code=4752 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(188): warning:  #550-D: variable "delay" was set but never used
+main.c(213): warning:  #550-D: variable "delay" was set but never used
+main.c(272): warning:  #550-D: variable "delay" was set but never used
+main.c(457): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(564): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(566): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(568): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(538): warning:  #550-D: variable "color" was set but never used
+main.c(540): warning:  #177-D: variable "ADCval1" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+ece353_base_project.axf: Error: L6200E: Symbol uartTxPollChar multiply defined (by uartpoll.o and main.o).
 Target not created
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(72): warning:  #550-D: variable "delay" was set but never used
-main.c(257): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(360): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(363): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(338): warning:  #550-D: variable "color" was set but never used
+main.c(153): warning:  #550-D: variable "delay" was set but never used
+main.c(178): warning:  #550-D: variable "delay" was set but never used
+main.c(237): warning:  #550-D: variable "delay" was set but never used
+main.c(422): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(531): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(533): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(535): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(503): warning:  #550-D: variable "color" was set but never used
+main.c(505): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(509): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-ece353_base_project.axf: Error: L6218E: Undefined symbol pwm (referred from systick.o).
+Program Size: Code=4812 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 10 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(153): warning:  #550-D: variable "delay" was set but never used
+main.c(178): warning:  #550-D: variable "delay" was set but never used
+main.c(237): warning:  #550-D: variable "delay" was set but never used
+main.c(422): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(531): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(533): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(535): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(503): warning:  #550-D: variable "color" was set but never used
+main.c(505): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(509): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4828 RO-data=76 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 10 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(153): warning:  #550-D: variable "delay" was set but never used
+main.c(178): warning:  #550-D: variable "delay" was set but never used
+main.c(237): warning:  #550-D: variable "delay" was set but never used
+main.c(422): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(531): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(533): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(535): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(503): warning:  #550-D: variable "color" was set but never used
+main.c(505): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(508): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(509): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4720 RO-data=76 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(153): warning:  #550-D: variable "delay" was set but never used
+main.c(178): warning:  #550-D: variable "delay" was set but never used
+main.c(237): warning:  #550-D: variable "delay" was set but never used
+main.c(422): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(531): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(533): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(535): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(503): warning:  #550-D: variable "color" was set but never used
+main.c(505): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(508): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(509): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4708 RO-data=76 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4848 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 10 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4740 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4700 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4704 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 10 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4704 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #550-D: variable "myString" was set but never used
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4712 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4812 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 10 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4804 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4804 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(534): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(536): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(538): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4812 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(534): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(536): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(538): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4712 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(534): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(536): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(538): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4708 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4704 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4804 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4712 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4800 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4812 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4808 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4816 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(549): error:  #167: argument of type "char" is incompatible with parameter of type "char *"
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
 Target not created
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(72): warning:  #550-D: variable "delay" was set but never used
-main.c(257): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(360): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(363): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(338): warning:  #550-D: variable "color" was set but never used
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(510): error:  #144: a value of type "char *" cannot be used to initialize an entity of type "char"
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(549): error:  #167: argument of type "char" is incompatible with parameter of type "char *"
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
-linking...
-Program Size: Code=4136 RO-data=72 RW-data=324 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(72): warning:  #550-D: variable "delay" was set but never used
-main.c(257): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(360): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(363): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(338): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=4136 RO-data=72 RW-data=324 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(72): warning:  #550-D: variable "delay" was set but never used
-main.c(257): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(360): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(363): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(338): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-Program Size: Code=4132 RO-data=72 RW-data=324 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(72): warning:  #550-D: variable "delay" was set but never used
-main.c(257): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(360): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(363): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(338): warning:  #550-D: variable "color" was set but never used
-compiling systick.c...
-linking...
-ece353_base_project.axf: Error: L6218E: Undefined symbol pwm (referred from systick.o).
+compiling uartPoll.c...
 Target not created
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(510): error:  #144: a value of type "char *" cannot be used to initialize an entity of type "char"
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4148 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 5 Warning(s).
+Program Size: Code=4824 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -564,16 +787,22 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4152 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4832 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -582,91 +811,22 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4160 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4176 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4832 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -680,29 +840,23 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
-Build target 'base_project'
-assembling Startup.s...
-compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
-compiling systick.c...
-linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4812 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -711,16 +865,23 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4824 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -729,16 +890,76 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(510): error:  #20: identifier "string" is undefined
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(510): error:  #20: identifier "String" is undefined
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(510): error:  #144: a value of type "char [23]" cannot be used to initialize an entity of type "char [21]"
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+Target not created
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4856 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -747,16 +968,23 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4864 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -765,16 +993,23 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4144 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4864 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
@@ -783,16 +1018,380 @@ Verify OK.
 Build target 'base_project'
 assembling Startup.s...
 compiling main.c...
-main.c(73): warning:  #550-D: variable "delay" was set but never used
-main.c(258): warning:  #223-D: function "sysTickSleep" declared implicitly
-main.c(361): warning:  #223-D: function "TIMER0Config" declared implicitly
-main.c(364): warning:  #223-D: function "SYSTICKConfig" declared implicitly
-main.c(339): warning:  #550-D: variable "color" was set but never used
-main.c(341): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
 compiling systick.c...
+compiling uartPoll.c...
 linking...
-Program Size: Code=4140 RO-data=72 RW-data=332 ZI-data=260  
-"ece353_base_project.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=4864 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4856 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4860 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4844 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4848 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4832 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4744 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4808 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4824 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(532): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(534): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(536): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(539): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4824 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(540): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(512): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4880 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(540): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(512): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4884 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 12 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(540): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "myChar" was declared but never referenced
+main.c(512): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4824 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 13 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(540): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "myChar" was declared but never referenced
+main.c(512): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4824 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 13 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(540): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "myChar" was declared but never referenced
+main.c(512): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4824 RO-data=52 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 13 Warning(s).
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(155): warning:  #550-D: variable "delay" was set but never used
+main.c(180): warning:  #550-D: variable "delay" was set but never used
+main.c(239): warning:  #550-D: variable "delay" was set but never used
+main.c(424): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(533): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(535): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(537): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(540): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(505): warning:  #550-D: variable "color" was set but never used
+main.c(507): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(510): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(511): warning:  #177-D: variable "myChar" was declared but never referenced
+main.c(512): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uartPoll.c...
+linking...
+Program Size: Code=4812 RO-data=72 RW-data=500 ZI-data=260  
+"ece353_base_project.axf" - 0 Error(s), 13 Warning(s).
 Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.

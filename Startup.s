@@ -75,7 +75,6 @@ __heap_limit
 
     EXTERN  TIMER0IntHandler
 	EXTERN  SYSTICKIntHandler
-	EXTERN  WatchDogISR
 	EXTERN  UARTIntHandler
 ;******************************************************************************
 ;

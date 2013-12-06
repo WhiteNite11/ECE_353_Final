@@ -28,6 +28,8 @@ void TIMER0IntHandler(void){
 
    //Clear the interrupt
    TIMER0_ICR_R	|= TIMER_ICR_TATOCINT;
+   //Pet the watchdog
+   WATCHDOG0_LOAD_R   = 80000000;
 }
  /****************************************************************************
  * The Timer0 Configuration Routine
@@ -45,6 +47,20 @@ void TIMER0Config(uint32_t loadVal)
   NVIC_EN0_R      |= NVIC_EN0_INT19;	//Enable interrupt 19 in NVIC
   TIMER0_CTL_R    |= TIMER_CTL_TAEN;    // enable TimerA
   
+}
+
+/****************************************************************************
+ * The wATCHDOGTimer Configuration Routine
+ ****************************************************************************/
+void WatchdogTIMERConfig()
+{
+ SYSCTL_RCGCWD_R   |= SYSCTL_RCGCWD_R0;
+ //Set the load value
+ WATCHDOG0_LOAD_R   = 80000000;
+ //Enable board reset on failure
+ WATCHDOG0_CTL_R   |= WDT_CTL_RESEN;
+ //Enable interrupts, and the timer
+ WATCHDOG0_CTL_R   |= WDT_CTL_INTEN;
 }
  /****************************************************************************
  * The SysTick Handler
