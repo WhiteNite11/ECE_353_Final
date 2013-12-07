@@ -395,6 +395,33 @@ uint32_t GetADCval(uint32_t Channel)
 
   return result;
 }
+
+void initializeDisplay(){
+int i = 0;
+   // Disable all Outputs
+  GpioPortF->Data |= ~OUTPUT_ENABLE_B;
+  
+  while(i < 8){
+  // Activate rowIndex 
+  GpioPortC->Data = ROW_EN;
+  GpioPortB->Data = ~(1 << i);
+  GpioPortC->Data = ENABLES_OFF;
+
+  // CLEAR LEDs
+  GpioPortC->Data = RED_EN;
+  GpioPortB->Data = 0xFF;
+  GpioPortC->Data = ENABLES_OFF;
+  GpioPortC->Data = BLUE_EN;
+  GpioPortB->Data = 0xFF;
+  GpioPortC->Data = ENABLES_OFF;
+  GpioPortC->Data = GREEN_EN;
+  GpioPortB->Data = 0xFF;
+  GpioPortC->Data = ENABLES_OFF;
+  i++;
+  }
+  // Enable All Output
+  GpioPortF->Data &= OUTPUT_ENABLE_B;
+}
 int 
 main(void)
 {
@@ -458,7 +485,7 @@ main(void)
   initializeSPI(SSI0, PHASE, POLARITY);
   //Init ADC
   ADCInit();
-
+  initializeDisplay();
   // Set up the UARTS for 115200 8N1
   InitializeUART(UART0);
   InitializeUART(UART2);
@@ -470,16 +497,14 @@ main(void)
   GPIO_PORTD_LOCK_R = 0x4C4F434B;
   GPIO_PORTD_CR_R = 0xFF;
   initializeGPIOPort(PORTD, &portD_config);
-  //EnableInterrupts(); 
+  EnableInterrupts(); 
   //Get initial ADC values
   pwm = GetADCval(POT_RIGHT) / 40;
   ADCval2 = GetADCval(POT_LEFT) / 575;
   
   
   // Print out the current string
-  uartTxPoll(UART0,"\n\r\n\rCurrent Greeint Message: ");
-  uartTxPoll(UART0,myString);
-  uartTxPoll(UART0,"\n\r");
+  uartTxPoll(UART0,"Hello World\n\r");
 
   while(1)
   {
