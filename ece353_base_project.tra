@@ -4,18 +4,18 @@
 ### List of Objects: adding '"startup.o"'
 ### List of Objects: adding '"main.o"'
 ### List of Objects: adding '"systick.o"'
-### List of Objects: adding '"uartpoll.o"'
+### List of Objects: adding '"uart.o"'
 ### List of Objects: adding '".\lib\pll.lib"'
 ### List of Objects: adding '".\lib\portC_init.lib"'
 ### ADS-LD Command completed:
---cpu Cortex-M4.fp "startup.o" "main.o" "systick.o" "uartpoll.o" ".\lib\pll.lib" ".\lib\portC_init.lib" --library_type=microlib --strict --scatter ".\ece353.sct" 
+--cpu Cortex-M4.fp "startup.o" "main.o" "systick.o" "uart.o" ".\lib\pll.lib" ".\lib\portC_init.lib" --library_type=microlib --strict --scatter ".\ece353.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\ece353_base_project.map" -o "ece353_base_project.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: 'ece353_base_project.axf'
 ### ADS-LD Command File: 'ece353_base_project.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'ece353_base_project.lnp', Handle=0x00001230
+### Creating CmdFile 'ece353_base_project.lnp', Handle=0x0000073C
 ### Writing '.lnp' file
 ### ADS-LD Command file 'ece353_base_project.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

@@ -13,4 +13,4 @@ main.o: C:\Keil\ARM\RV31\INC\errno.h
 main.o: team.h
 main.o: led_chars.h
 main.o: SPI.h
-main.o: uartPoll.h
+main.o: uart_cmds.h

@@ -12,7 +12,8 @@
 #include "led_chars.h"
 #include "gpio.h"
 #include "SPI.h"
-#include "uartPoll.h"
+#include "UART.h"
+#include "uart_cmds.h"
 
 /******************************************************************************
  * Defines
@@ -62,90 +63,12 @@
 //*****************************************************************************
 extern void PLL_Init(void);
 extern void initPortC(void);
+extern void EnableInterrupts(void);
+extern void DisableInterrupts(void);
 
 /******************************************************************************
  * Functions
  *****************************************************************************/
-//*****************************************************************************
-// Configure UART0 for Tx and Rx from computer
-//*****************************************************************************
-bool uartInitPolling(uint32_t base)
-{
-  uint32_t delay;
-  UART_PERIPH *myUart;
-  
-  if ( base != UART0)
-    return false;
-  
-  // *******************************************
-  // Configure GPIO PA0 and PA1 to be UART Pins
-  // *******************************************
-  
-  // Turn on the clock gating register for GPIO port A
-  // Make sure not to turn of any of the other ports
-  SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
-  
-  delay = SYSCTL_RCGCGPIO_R;
-  
-  // Set the Digital Enable
-  GpioPortA->DigitalEnable |= PIN_0 | PIN_1;
-  
-  // Set the Alternate Function
-  GpioPortA->AlternateFunctionSelect |=  PIN_0 | PIN_1;
-  
-  // Set the Port Control Register
-  GpioPortA->PortControl |= GPIO_PCTL_PA0_U0RX | GPIO_PCTL_PA1_U0TX;
-  
-  
-  // *******************************
-  // Set up the UART registers
-  // *******************************
-  myUart = (UART_PERIPH *)base;
-  
-  // Eanble the clock gating register
-  // ( Not found in the UART_PERIPH struct)
-  SYSCTL_RCGCUART_R |= SYSCTL_RCGCUART_R0;
-  
-  delay = SYSCTL_RCGCUART_R;
-  
-  // Set the baud rate for 115200
-  myUart->IntegerBaudRateDiv = 43;
-  myUart->FracBaudRateDiv = 26;
-
-  // Configure the Line Control for 8-n-1
-  myUart->LineControl = UART_LCRH_WLEN_8 | UART_LCRH_FEN;
-  
-  // Enable the UART - Need to enabel both TX and RX
-  myUart->UARTControl = UART_CTL_UARTEN | UART_CTL_RXE | UART_CTL_TXE ;
-  
-  // Wait until the UART is avaiable
-  while( !(SYSCTL_PRUART_R & SYSCTL_PRUART_R0 ))
-  {}
-  
-  delay = 500;
-  while( delay != 0)
-  {
-    delay--;
-  }
-  
-  return true;
-}
-
-
-//***************************************************************************
-// This routine returns a character received from the UART/COM port.
-// This routine blocks until a character is received
-//***************************************************************************/
-char uartRxPoll(uint32_t base)
-{
-  UART_PERIPH *myPeriph = (UART_PERIPH *)base;
-  
-  while(myPeriph->Flag & UART_FR_RXFE)
-  {
-    // Wait
-  }
-   return myPeriph->Data;
-}
 
 // *******************************************
 // Configure GPIO PA5-PA2 as SPI
@@ -228,17 +151,14 @@ bool initializeSPI( uint32_t base, uint8_t phase, uint8_t polarity)
 //*****************************************************************************
 // Initialize the GPIO port
 //*****************************************************************************
-bool  gpioPortInit( 
+bool initializeGPIOPort( 
                     uint32_t baseAddress, 
-                    uint8_t digitalEnableMask, 
-                    uint8_t inputMask,
-										uint8_t outputMask, 
-                    uint8_t pullUpMask
+                    GPIO_CONFIG * configAddress
                   )
 {
   uint32_t delay;
   GPIO_PORT *myPort = (GPIO_PORT *)baseAddress;
-  
+  GPIO_CONFIG *myConfig = (GPIO_CONFIG *)configAddress;
   // Validate that a correct base address has been passed
   // Turn on the Clock Gating Register
   switch (baseAddress) 
@@ -267,18 +187,20 @@ bool  gpioPortInit(
   // Delay a bit
   delay = SYSCTL_RCGCGPIO_R;
   // Set the Direction Register
-  myPort->Direction                   &= ~inputMask;
-  myPort->Direction					  				|= outputMask;
+  myPort->Direction  &= ~(myConfig->Input);
+  myPort->Direction	 |= myConfig->Output;
   
   // Enable Pull-Up Resistors
-  myPort->PullUpSelect                |= pullUpMask;
+  myPort->PullUpSelect   |= myConfig->PullUp;
   
   // Disable the Alternate Function Select
-  myPort->AlternateFunctionSelect     = 0;
+  myPort->AlternateFunctionSelect   |= myConfig->AlternateFunctionEnable;
   
   // Enable Pins as Digital Pins
-  myPort->DigitalEnable               |= digitalEnableMask;
+  myPort->DigitalEnable  |= myConfig->DigitalEnable;
   
+  //Select control register values
+  myPort->PortControl |= myConfig->PortControl;
   return true;
 }
 
@@ -289,13 +211,13 @@ void displayLEDChar(uint8_t symbol, uint8_t color){
   static uint8_t rowIndex = 7;
   static uint8_t charIndex = 0;
   static uint8_t currPWM = 0;
+  // Disable all Outputs
+  GpioPortF->Data |= ~OUTPUT_ENABLE_B;
+
   // Activate rowIndex 
   GpioPortC->Data = ROW_EN;
   GpioPortB->Data = ~(1 << rowIndex);
   GpioPortC->Data = ENABLES_OFF;
-	
-  // Disable all Outputs
-  GpioPortF->Data |= ~OUTPUT_ENABLE_B;
 
   // CLEAR LEDs
   GpioPortC->Data = RED_EN;
@@ -507,7 +429,7 @@ main(void)
   uint32_t ADCval1 = 0;
   uint32_t ADCval2 = 0;
   //Current string
-  char myString[21];
+  char myString[21] = "hello world";
   char myChar;
   int8_t stringIndex=-1;
 
@@ -516,39 +438,48 @@ main(void)
   
   //Configure Port C
   initPortC();
-  
-  //Configure Port B  DATA_7 through DATA_0 as outputs
-  gpioPortInit(PORTB, 0xFF, 0x00, 0xFF, 0x00);
-  //Configure Port F /OE as output and SW5 as input
-  gpioPortInit(PORTF, 0x12, 0x02, 0x10, 0x12);
-  //Configure Port A SW2 and SW3 as inputs
-  gpioPortInit(PORTA, 0xC0, 0xC0, 0x00, 0xC0);
-  //Configure Port D SW4 and SW5 as inputs
-  gpioPortInit(PORTD, 0x0C, 0x0C, 0x00, 0x0C);
-  
-  // Initialize SPI0 interface
-  initializeSPI(SSI0, PHASE, POLARITY);
-  
+  //Configure the SYSTICK timer 12.5uS ticks
+  SYSTICKConfig(1000, true);
   //Configure Timer0 1mS ticks
   TIMER0Config(80000);
   //Configure watchdog with 1s reset
   WatchdogTIMERConfig();
-  //Configure the SYSTICK timer 12.5uS ticks
-  SYSTICKConfig(1000, true);
-  //Initialize UART0 and wait a bit
-  uartInitPolling(UART0);
-  sysTickSleep(1);
+  
+
+  // Initialize the GPIO Ports
+  initializeGPIOPort(PORTA, &portA_config);
+  initializeGPIOPort(PORTB, &portB_config);
+  initializeGPIOPort(PORTC, &portC_config);
+  initializeGPIOPort(PORTD, &portD_config);
+  initializeGPIOPort(PORTE, &portE_config);
+  initializeGPIOPort(PORTF, &portF_config);
+  
+  // Initialize SPI0 interface
+  initializeSPI(SSI0, PHASE, POLARITY);
   //Init ADC
   ADCInit();
+
+  // Set up the UARTS for 115200 8N1
+  InitializeUART(UART0);
+  InitializeUART(UART2);
+  InitializeUART(UART5);
+  
+  // Since PD7 is shared with the NMI, we need to clear the lock register and 
+  // set the commit register so that all the pins alternate functions can
+  // be used.
+  GPIO_PORTD_LOCK_R = 0x4C4F434B;
+  GPIO_PORTD_CR_R = 0xFF;
+  initializeGPIOPort(PORTD, &portD_config);
+  //EnableInterrupts(); 
   //Get initial ADC values
   pwm = GetADCval(POT_RIGHT) / 40;
   ADCval2 = GetADCval(POT_LEFT) / 575;
   
   
   // Print out the current string
-  uartTxPollString(UART0,"\n\r\n\rCurrent Greeint Message: ");
-  uartTxPollString(UART0,"hello");
-  uartTxPollString(UART0,"\n\r");
+  uartTxPoll(UART0,"\n\r\n\rCurrent Greeint Message: ");
+  uartTxPoll(UART0,myString);
+  uartTxPoll(UART0,"\n\r");
 
   while(1)
   {

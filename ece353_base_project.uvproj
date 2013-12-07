@@ -402,9 +402,9 @@
               <FilePath>.\systick.c</FilePath>
             </File>
             <File>
-              <FileName>uartPoll.c</FileName>
+              <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\uartPoll.c</FilePath>
+              <FilePath>.\uart.c</FilePath>
             </File>
           </Files>
         </Group>

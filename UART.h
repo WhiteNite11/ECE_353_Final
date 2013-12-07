@@ -74,27 +74,30 @@ typedef struct {
   values inside the init function.
 */
 typedef struct {
-  uint8_t     UartEn;						// Enable/Disable	   
-  uint8_t     UARTRxEn;						// Enable/Disable
-  uint8_t     UARTTxEn;						// Enable/Disable
+  uint8_t     UartEn;								// Enable/Disable	   
+  uint8_t     UARTRxEn;							// Enable/Disable
+  uint8_t     UARTTxEn;							// Enable/Disable
   uint8_t     WordLen;
   uint32_t	  BaudRate;
-  uint8_t     FifoEn;						// Enable/Disable
-  uint8_t     _2StopEn;						// Enable/Disable
-  uint8_t     ParityEn;						// Enable/Disable
+  uint8_t     FifoEn;								// Enable/Disable
+  uint8_t     _2StopEn;							// Enable/Disable
+  uint8_t     ParityEn;							// Enable/Disable
   uint8_t     EvenParityEn;					// Enable/Disable
   uint8_t     HighSpeedEn;					// Enable/Disable
   uint8_t     RxIntFIFO;
   uint8_t     TxIntFIFO; 
-  uint8_t     RxIntMaskEn;					// Enable/Disable
-  uint8_t     TxIntMaskEn;					// Enable/Disable
+  uint8_t     RxIntMaskEn;						// Enable/Disable
+  uint8_t     TxIntMaskEn;						// Enable/Disable
   uint8_t     RxTimeOutIntMaskEn;			// Enable/Disable
-  uint8_t     OvrrIntMaskEn;				// Enable/Disable
+  uint8_t     OvrrIntMaskEn;					// Enable/Disable
   uint8_t     ParityErrIntMaskEn;			// Enable/Disable
   uint8_t     FramingErrIntMaskEn;			// Enable/Disable
 } UART_CONFIG;
 
 
 /* Exported functions --------------------------------------------------*/
-
+void uartTxPoll(uint32_t base, char *data);
+char uartRxPoll(uint32_t base, bool block);
+bool InitializeUART(uint32_t base);
+void uartTxCharPoll(uint32_t base, char data);
 #endif

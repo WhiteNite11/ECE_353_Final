@@ -12,8 +12,9 @@ Section Cross References
     main.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy4
     main.o(.text) refers to pll.o(.text) for PLL_Init
     main.o(.text) refers to portc_init.o(.text) for initPortC
-    main.o(.text) refers to uartpoll.o(.text) for uartTxPollString
+    main.o(.text) refers to uart.o(.text) for InitializeUART
     main.o(.text) refers to main.o(.constdata) for .constdata
+    main.o(.text) refers to main.o(.bss) for portE_config
     systick.o(.text) refers to dfltui.o(.text) for __aeabi_ui2d
     systick.o(.text) refers to ddiv.o(.text) for __aeabi_ddiv
     systick.o(.text) refers to dfixui.o(.text) for __aeabi_d2uiz
@@ -46,9 +47,8 @@ Removing Unused input sections from the image.
 
     Removing startup.o(HEAP), (0 bytes).
     Removing startup.o(.text), (28 bytes).
-    Removing main.o(.bss), (20 bytes).
 
-3 unused section(s) (total 48 bytes) removed from the image.
+2 unused section(s) (total 28 bytes) removed from the image.
 
 ==============================================================================
 
@@ -83,7 +83,7 @@ Image Symbol Table
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     portc_init.c                             0x00000000   Number         0  portc_init.o ABSOLUTE
     systick.c                                0x00000000   Number         0  systick.o ABSOLUTE
-    uartPoll.c                               0x00000000   Number         0  uartpoll.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
     $v0                                      0x0000026c   Number         0  startup.o(RESET)
     NmiSR                                    0x00000281   Thumb Code     0  startup.o(RESET)
     FaultISR                                 0x00000283   Thumb Code     0  startup.o(RESET)
@@ -96,24 +96,24 @@ Image Symbol Table
     .ARM.Collect$$$$00002712                 0x00000298   Section        4  entry2.o(.ARM.Collect$$$$00002712)
     __lit__00000000                          0x00000298   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x0000029c   Section        0  main.o(.text)
-    .text                                    0x00000ce4   Section        0  systick.o(.text)
-    .text                                    0x00000ed8   Section        0  uartpoll.o(.text)
-    .text                                    0x00000f08   Section        0  pll.o(.text)
-    .text                                    0x00000f94   Section        0  portc_init.o(.text)
-    .text                                    0x00000fe8   Section        0  memcpya.o(.text)
-    .text                                    0x0000100c   Section        0  ddiv.o(.text)
-    .text                                    0x000010ea   Section        0  dfltui.o(.text)
-    .text                                    0x00001104   Section        0  dfixui.o(.text)
-    .text                                    0x00001132   Section        0  llushr.o(.text)
-    .text                                    0x00001152   Section        0  depilogue.o(.text)
-    .text                                    0x00001152   Section        0  iusefp.o(.text)
-    .text                                    0x00001210   Section       36  init.o(.text)
-    .text                                    0x00001234   Section        0  llshl.o(.text)
-    .text                                    0x00001252   Section        0  __dczerorl2.o(.text)
-    i.__scatterload_copy                     0x000012ae   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x000012bc   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x000012be   Section       14  handlers.o(i.__scatterload_zeroinit)
-    .constdata                               0x000012cc   Section       37  main.o(.constdata)
+    .text                                    0x00000c84   Section        0  systick.o(.text)
+    .text                                    0x00000e78   Section        0  uart.o(.text)
+    .text                                    0x00000fb0   Section        0  pll.o(.text)
+    .text                                    0x0000103c   Section        0  portc_init.o(.text)
+    .text                                    0x00001090   Section        0  memcpya.o(.text)
+    .text                                    0x000010b4   Section        0  ddiv.o(.text)
+    .text                                    0x00001192   Section        0  dfltui.o(.text)
+    .text                                    0x000011ac   Section        0  dfixui.o(.text)
+    .text                                    0x000011da   Section        0  llushr.o(.text)
+    .text                                    0x000011fa   Section        0  depilogue.o(.text)
+    .text                                    0x000011fa   Section        0  iusefp.o(.text)
+    .text                                    0x000012b8   Section       36  init.o(.text)
+    .text                                    0x000012dc   Section        0  llshl.o(.text)
+    .text                                    0x000012fa   Section        0  __dczerorl2.o(.text)
+    i.__scatterload_copy                     0x00001356   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00001364   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001366   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .constdata                               0x00001374   Section       61  main.o(.constdata)
     .data                                    0x20000000   Section      490  main.o(.data)
     ucDispChar                               0x2000009b   Data         296  main.o(.data)
     rowIndex                                 0x200001e6   Data           1  main.o(.data)
@@ -123,8 +123,9 @@ Image Symbol Table
     ADCtimer                                 0x200001ec   Data           2  systick.o(.data)
     buttonTime                               0x200001ee   Data           1  systick.o(.data)
     nextLED                                  0x200001f0   Data           4  systick.o(.data)
-    STACK                                    0x200001f8   Section      256  startup.o(STACK)
-    StackMem                                 0x200001f8   Data           0  startup.o(STACK)
+    .bss                                     0x200001f4   Section       20  main.o(.bss)
+    STACK                                    0x20000208   Section      256  startup.o(STACK)
+    StackMem                                 0x20000208   Data           0  startup.o(STACK)
 
     Global Symbols
 
@@ -141,49 +142,49 @@ Image Symbol Table
     __main_after_scatterload                 0x00000291   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
     _main_clock                              0x00000291   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
     _main_init                               0x00000291   Thumb Code     0  entry8.o(.ARM.Collect$$$$00000009)
-    uartInitPolling                          0x0000029d   Thumb Code   164  main.o(.text)
-    uartRxPoll                               0x00000341   Thumb Code    20  main.o(.text)
-    initializePortASpi0                      0x00000355   Thumb Code    80  main.o(.text)
-    initializeSPI                            0x000003a5   Thumb Code   132  main.o(.text)
-    gpioPortInit                             0x00000429   Thumb Code   226  main.o(.text)
-    displayLEDChar                           0x0000050b   Thumb Code   864  main.o(.text)
-    debounce                                 0x0000086b   Thumb Code    38  main.o(.text)
-    checkPB                                  0x00000891   Thumb Code    16  main.o(.text)
-    ADCInit                                  0x000008a1   Thumb Code   160  main.o(.text)
-    GetADCval                                0x00000941   Thumb Code    54  main.o(.text)
-    main                                     0x00000977   Thumb Code   860  main.o(.text)
-    TIMER0IntHandler                         0x00000ce5   Thumb Code    90  systick.o(.text)
-    TIMER0Config                             0x00000d3f   Thumb Code   108  systick.o(.text)
-    WatchdogTIMERConfig                      0x00000dab   Thumb Code    44  systick.o(.text)
-    SYSTICKIntHandler                        0x00000dd7   Thumb Code    56  systick.o(.text)
-    SYSTICKConfig                            0x00000e0f   Thumb Code    40  systick.o(.text)
-    sysTickSleep                             0x00000e37   Thumb Code   100  systick.o(.text)
-    uartTxPollString                         0x00000ed9   Thumb Code    32  uartpoll.o(.text)
-    uartTxPollChar                           0x00000ef9   Thumb Code    16  uartpoll.o(.text)
-    PLL_Init                                 0x00000f09   Thumb Code   134  pll.o(.text)
-    initPortC                                0x00000f95   Thumb Code    56  portc_init.o(.text)
-    __aeabi_memcpy                           0x00000fe9   Thumb Code    36  memcpya.o(.text)
-    __aeabi_memcpy4                          0x00000fe9   Thumb Code     0  memcpya.o(.text)
-    __aeabi_memcpy8                          0x00000fe9   Thumb Code     0  memcpya.o(.text)
-    __aeabi_ddiv                             0x0000100d   Thumb Code   222  ddiv.o(.text)
-    __aeabi_ui2d                             0x000010eb   Thumb Code    26  dfltui.o(.text)
-    __aeabi_d2uiz                            0x00001105   Thumb Code    46  dfixui.o(.text)
-    __aeabi_llsr                             0x00001133   Thumb Code    32  llushr.o(.text)
-    _ll_ushift_r                             0x00001133   Thumb Code     0  llushr.o(.text)
-    __I$use$fp                               0x00001153   Thumb Code     0  iusefp.o(.text)
-    _double_round                            0x00001153   Thumb Code    26  depilogue.o(.text)
-    _double_epilogue                         0x0000116d   Thumb Code   164  depilogue.o(.text)
-    __scatterload                            0x00001211   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x00001211   Thumb Code     0  init.o(.text)
-    __aeabi_llsl                             0x00001235   Thumb Code    30  llshl.o(.text)
-    _ll_shift_l                              0x00001235   Thumb Code     0  llshl.o(.text)
-    __decompress                             0x00001253   Thumb Code     0  __dczerorl2.o(.text)
-    __decompress1                            0x00001253   Thumb Code    92  __dczerorl2.o(.text)
-    __scatterload_copy                       0x000012af   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x000012bd   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x000012bf   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x000012f4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00001314   Number         0  anon$$obj.o(Region$$Table)
+    initializePortASpi0                      0x0000029d   Thumb Code    80  main.o(.text)
+    initializeSPI                            0x000002ed   Thumb Code   132  main.o(.text)
+    initializeGPIOPort                       0x00000371   Thumb Code   264  main.o(.text)
+    displayLEDChar                           0x00000479   Thumb Code   856  main.o(.text)
+    debounce                                 0x000007d1   Thumb Code    38  main.o(.text)
+    checkPB                                  0x000007f7   Thumb Code    16  main.o(.text)
+    ADCInit                                  0x00000807   Thumb Code   160  main.o(.text)
+    GetADCval                                0x000008a7   Thumb Code    54  main.o(.text)
+    main                                     0x000008dd   Thumb Code   932  main.o(.text)
+    TIMER0IntHandler                         0x00000c85   Thumb Code    90  systick.o(.text)
+    TIMER0Config                             0x00000cdf   Thumb Code   108  systick.o(.text)
+    WatchdogTIMERConfig                      0x00000d4b   Thumb Code    44  systick.o(.text)
+    SYSTICKIntHandler                        0x00000d77   Thumb Code    56  systick.o(.text)
+    SYSTICKConfig                            0x00000daf   Thumb Code    40  systick.o(.text)
+    sysTickSleep                             0x00000dd7   Thumb Code   100  systick.o(.text)
+    InitializeUART                           0x00000e79   Thumb Code   208  uart.o(.text)
+    uartRxPoll                               0x00000f49   Thumb Code    42  uart.o(.text)
+    uartTxPoll                               0x00000f73   Thumb Code    32  uart.o(.text)
+    uartTxCharPoll                           0x00000f93   Thumb Code    16  uart.o(.text)
+    PLL_Init                                 0x00000fb1   Thumb Code   134  pll.o(.text)
+    initPortC                                0x0000103d   Thumb Code    56  portc_init.o(.text)
+    __aeabi_memcpy                           0x00001091   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x00001091   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x00001091   Thumb Code     0  memcpya.o(.text)
+    __aeabi_ddiv                             0x000010b5   Thumb Code   222  ddiv.o(.text)
+    __aeabi_ui2d                             0x00001193   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2uiz                            0x000011ad   Thumb Code    46  dfixui.o(.text)
+    __aeabi_llsr                             0x000011db   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x000011db   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x000011fb   Thumb Code     0  iusefp.o(.text)
+    _double_round                            0x000011fb   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x00001215   Thumb Code   164  depilogue.o(.text)
+    __scatterload                            0x000012b9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000012b9   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x000012dd   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x000012dd   Thumb Code     0  llshl.o(.text)
+    __decompress                             0x000012fb   Thumb Code     0  __dczerorl2.o(.text)
+    __decompress1                            0x000012fb   Thumb Code    92  __dczerorl2.o(.text)
+    __scatterload_copy                       0x00001357   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00001365   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001367   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x000013b4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000013d4   Number         0  anon$$obj.o(Region$$Table)
     portA_config                             0x20000000   Data          20  main.o(.data)
     portB_config                             0x20000014   Data          20  main.o(.data)
     portC_config                             0x20000028   Data          20  main.o(.data)
@@ -203,7 +204,8 @@ Image Symbol Table
     nextLEDrow                               0x200001e4   Data           1  main.o(.data)
     buttonPoll                               0x200001e5   Data           1  main.o(.data)
     checkADC                                 0x200001e9   Data           1  main.o(.data)
-    __initial_sp                             0x200002f8   Data           0  startup.o(STACK)
+    portE_config                             0x200001f4   Data          20  main.o(.bss)
+    __initial_sp                             0x20000308   Data           0  startup.o(STACK)
 
 
 
@@ -213,51 +215,51 @@ Memory Map of the image
 
   Image Entry point : 0x00000289
 
-  Load Region LR_IROM (Base: 0x00000000, Size: 0x00001508, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x00001454])
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x000015c8, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x00001514])
 
-    Execution Region ER_IROM (Base: 0x00000000, Size: 0x00001314, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM (Base: 0x00000000, Size: 0x000013d4, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000288   Code   RO            3    RESET               startup.o
-    0x00000288   0x00000000   Code   RO          137  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x00000288   0x00000004   Code   RO          150    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0000028c   0x00000004   Code   RO          153    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000290   0x00000000   Code   RO          155    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000290   0x00000008   Code   RO          156    .ARM.Collect$$$$00000009  mc_w.l(entry8.o)
-    0x00000298   0x00000004   Code   RO          151    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x0000029c   0x00000a48   Code   RO           11    .text               main.o
-    0x00000ce4   0x000001f4   Code   RO           75    .text               systick.o
-    0x00000ed8   0x00000030   Code   RO           89    .text               uartpoll.o
-    0x00000f08   0x0000008c   Code   RO          101    .text               pll.lib(pll.o)
-    0x00000f94   0x00000054   Code   RO          116    .text               portC_init.lib(portc_init.o)
-    0x00000fe8   0x00000024   Code   RO          140    .text               mc_w.l(memcpya.o)
-    0x0000100c   0x000000de   Code   RO          144    .text               mf_w.l(ddiv.o)
-    0x000010ea   0x0000001a   Code   RO          146    .text               mf_w.l(dfltui.o)
-    0x00001104   0x0000002e   Code   RO          148    .text               mf_w.l(dfixui.o)
-    0x00001132   0x00000020   Code   RO          157    .text               mc_w.l(llushr.o)
-    0x00001152   0x00000000   Code   RO          159    .text               mc_w.l(iusefp.o)
-    0x00001152   0x000000be   Code   RO          160    .text               mf_w.l(depilogue.o)
-    0x00001210   0x00000024   Code   RO          162    .text               mc_w.l(init.o)
-    0x00001234   0x0000001e   Code   RO          164    .text               mc_w.l(llshl.o)
-    0x00001252   0x0000005c   Code   RO          174    .text               mc_w.l(__dczerorl2.o)
-    0x000012ae   0x0000000e   Code   RO          168    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x000012bc   0x00000002   Code   RO          169    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000012be   0x0000000e   Code   RO          170    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x000012cc   0x00000025   Data   RO           13    .constdata          main.o
-    0x000012f1   0x00000003   PAD
-    0x000012f4   0x00000020   Data   RO          166    Region$$Table       anon$$obj.o
+    0x00000288   0x00000000   Code   RO          140  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000288   0x00000004   Code   RO          153    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0000028c   0x00000004   Code   RO          156    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000290   0x00000000   Code   RO          158    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000290   0x00000008   Code   RO          159    .ARM.Collect$$$$00000009  mc_w.l(entry8.o)
+    0x00000298   0x00000004   Code   RO          154    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000029c   0x000009e8   Code   RO           11    .text               main.o
+    0x00000c84   0x000001f4   Code   RO           75    .text               systick.o
+    0x00000e78   0x00000138   Code   RO           89    .text               uart.o
+    0x00000fb0   0x0000008c   Code   RO          104    .text               pll.lib(pll.o)
+    0x0000103c   0x00000054   Code   RO          119    .text               portC_init.lib(portc_init.o)
+    0x00001090   0x00000024   Code   RO          143    .text               mc_w.l(memcpya.o)
+    0x000010b4   0x000000de   Code   RO          147    .text               mf_w.l(ddiv.o)
+    0x00001192   0x0000001a   Code   RO          149    .text               mf_w.l(dfltui.o)
+    0x000011ac   0x0000002e   Code   RO          151    .text               mf_w.l(dfixui.o)
+    0x000011da   0x00000020   Code   RO          160    .text               mc_w.l(llushr.o)
+    0x000011fa   0x00000000   Code   RO          162    .text               mc_w.l(iusefp.o)
+    0x000011fa   0x000000be   Code   RO          163    .text               mf_w.l(depilogue.o)
+    0x000012b8   0x00000024   Code   RO          165    .text               mc_w.l(init.o)
+    0x000012dc   0x0000001e   Code   RO          167    .text               mc_w.l(llshl.o)
+    0x000012fa   0x0000005c   Code   RO          177    .text               mc_w.l(__dczerorl2.o)
+    0x00001356   0x0000000e   Code   RO          171    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00001364   0x00000002   Code   RO          172    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00001366   0x0000000e   Code   RO          173    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00001374   0x0000003d   Data   RO           13    .constdata          main.o
+    0x000013b1   0x00000003   PAD
+    0x000013b4   0x00000020   Data   RO          169    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM (Base: 0x20000000, Size: 0x000002f8, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00000140])
+    Execution Region RW_IRAM (Base: 0x20000000, Size: 0x00000308, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00000140])
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000   0x000001ea   Data   RW           14    .data               main.o
     0x200001ea   0x00000002   PAD
     0x200001ec   0x00000008   Data   RW           76    .data               systick.o
-    0x200001f4   0x00000004   PAD
-    0x200001f8   0x00000100   Zero   RW            1    STACK               startup.o
+    0x200001f4   0x00000014   Zero   RW           12    .bss                main.o
+    0x20000208   0x00000100   Zero   RW            1    STACK               startup.o
 
 
 ==============================================================================
@@ -267,15 +269,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      2632        240         37        490          0      15441   main.o
+      2536        258         61        490         20      14860   main.o
        648        622          0          0        256        256   startup.o
        500         62          0          8          0       1761   systick.o
-        48          0          0          0          0       1026   uartpoll.o
+       312         22          0          0          0       3122   uart.o
 
     ----------------------------------------------------------------------
-      3828        924         72        500        260      18484   Object Totals
+      3996        964         96        500        276      19999   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         0          0          3          2          4          0   (incl. Padding)
+         0          0          3          2          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -323,15 +325,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      4812        974         72        500        260      21795   Grand Totals
-      4812        974         72        320        260      21795   ELF Image Totals (compressed)
-      4812        974         72        320          0          0   ROM Totals
+      4980       1014         96        500        276      23310   Grand Totals
+      4980       1014         96        320        276      23310   ELF Image Totals (compressed)
+      4980       1014         96        320          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 4884 (   4.77kB)
-    Total RW  Size (RW Data + ZI Data)               760 (   0.74kB)
-    Total ROM Size (Code + RO Data + RW Data)       5204 (   5.08kB)
+    Total RO  Size (Code + RO Data)                 5076 (   4.96kB)
+    Total RW  Size (RW Data + ZI Data)               776 (   0.76kB)
+    Total ROM Size (Code + RO Data + RW Data)       5396 (   5.27kB)
 
 ==============================================================================
 

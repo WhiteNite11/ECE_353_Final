@@ -3,9 +3,9 @@
 <title>Static Call Graph - [C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\ece353_base_project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\David\Documents\UW Fall 2013\ECE 353 Microcontrollers\FinalProject\dist\ece353_base_project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 791]: Last Updated: Thu Dec 05 22:00:01 2013
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 791]: Last Updated: Sat Dec 07 17:09:43 2013
 <BR><P>
-<H3>Maximum Stack Usage =        176 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        200 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; ADCInit &rArr; sysTickSleep &rArr; __aeabi_ui2d &rArr; _double_epilogue &rArr; _double_round
 <P>
@@ -64,14 +64,6 @@ Global Symbols
 
 <P><STRONG><a name="[25]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8.o(.ARM.Collect$$$$00000009))
 
-<P><STRONG><a name="[15]"></a>uartInitPolling</STRONG> (Thumb, 164 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uartInitPolling
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[26]"></a>uartRxPoll</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
-
 <P><STRONG><a name="[b]"></a>initializePortASpi0</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeSPI
 </UL>
@@ -84,13 +76,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[11]"></a>gpioPortInit</STRONG> (Thumb, 226 bytes, Stack size 20 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpioPortInit
+<P><STRONG><a name="[14]"></a>initializeGPIOPort</STRONG> (Thumb, 264 bytes, Stack size 12 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = initializeGPIOPort
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[18]"></a>displayLEDChar</STRONG> (Thumb, 864 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[18]"></a>displayLEDChar</STRONG> (Thumb, 856 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -116,25 +108,24 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6]"></a>main</STRONG> (Thumb, 860 bytes, Stack size 80 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = main &rArr; ADCInit &rArr; sysTickSleep &rArr; __aeabi_ui2d &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[6]"></a>main</STRONG> (Thumb, 932 bytes, Stack size 104 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = main &rArr; ADCInit &rArr; sysTickSleep &rArr; __aeabi_ui2d &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartTxPollString
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickSleep
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartTxPoll
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initPortC
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WatchdogTIMERConfig
 <LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0Config
-<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSTICKConfig
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSTICKConfig
 <LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PLL_Init
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitializeUART
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetADCval
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCInit
 <LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkPB
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;debounce
 <LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayLEDChar
-<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpioPortInit
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeGPIOPort
 <LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeSPI
-<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartInitPolling
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry8.o(.ARM.Collect$$$$00000009)
 </UL>
@@ -152,7 +143,7 @@ Global Symbols
 <P><STRONG><a name="[4]"></a>SYSTICKIntHandler</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, systick.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[14]"></a>SYSTICKConfig</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, systick.o(.text))
+<P><STRONG><a name="[11]"></a>SYSTICKConfig</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, systick.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -163,15 +154,22 @@ Global Symbols
 <LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCInit
+<BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCInit
 </UL>
 
-<P><STRONG><a name="[17]"></a>uartTxPollString</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, uartpoll.o(.text))
+<P><STRONG><a name="[15]"></a>InitializeUART</STRONG> (Thumb, 208 bytes, Stack size 8 bytes, uart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = InitializeUART
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[26]"></a>uartRxPoll</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, uart.o(.text), UNUSED)
+
+<P><STRONG><a name="[17]"></a>uartTxPoll</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, uart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[27]"></a>uartTxPollChar</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, uartpoll.o(.text), UNUSED)
+<P><STRONG><a name="[27]"></a>uartTxCharPoll</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, uart.o(.text), UNUSED)
 
 <P><STRONG><a name="[f]"></a>PLL_Init</STRONG> (Thumb, 134 bytes, Stack size 0 bytes, pll.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main

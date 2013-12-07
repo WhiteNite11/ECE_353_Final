@@ -1,4 +1,4 @@
---cpu Cortex-M4.fp "startup.o" "main.o" "systick.o" "uartpoll.o" ".\lib\pll.lib" ".\lib\portC_init.lib" --library_type=microlib --strict --scatter ".\ece353.sct" 
+--cpu Cortex-M4.fp "startup.o" "main.o" "systick.o" "uart.o" ".\lib\pll.lib" ".\lib\portC_init.lib" --library_type=microlib --strict --scatter ".\ece353.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\ece353_base_project.map" -o "ece353_base_project.axf"

@@ -285,7 +285,7 @@ UART_CONFIG UART0_config = {
   ENABLED,                  // UARTRx
   ENABLED,    				// UARTTx
   _8BITS,                   // WordLen
-  9600,                     // BaudRate
+  115200,                     // BaudRate
   ENABLED,                  // FIFO
   DISABLED,                 // _2Stop
   DISABLED,                 // Parity
