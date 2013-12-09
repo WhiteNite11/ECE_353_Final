@@ -396,3 +396,29 @@ Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
 Programming Done.
 Verify OK.
+Build target 'base_project'
+assembling Startup.s...
+compiling main.c...
+main.c(78): warning:  #550-D: variable "delay" was set but never used
+main.c(103): warning:  #550-D: variable "delay" was set but never used
+main.c(159): warning:  #550-D: variable "delay" was set but never used
+main.c(346): warning:  #223-D: function "sysTickSleep" declared implicitly
+main.c(469): warning:  #223-D: function "SYSTICKConfig" declared implicitly
+main.c(471): warning:  #223-D: function "TIMER0Config" declared implicitly
+main.c(473): warning:  #223-D: function "WatchdogTIMERConfig" declared implicitly
+main.c(454): warning:  #550-D: variable "color" was set but never used
+main.c(456): warning:  #177-D: variable "ADCval1" was declared but never referenced
+main.c(459): warning:  #177-D: variable "myString" was declared but never referenced
+main.c(460): warning:  #177-D: variable "myChar" was declared but never referenced
+main.c(461): warning:  #177-D: variable "stringIndex" was declared but never referenced
+compiling systick.c...
+compiling uart.c...
+uart.c(12): warning:  #550-D: variable "delay" was set but never used
+linking...
+Program Size: Code=5192 RO-data=96 RW-data=500 ZI-data=276  
+"ece353_base_project.axf" - 0 Error(s), 13 Warning(s).
+Load "C:\\Users\\David\\Documents\\UW Fall 2013\\ECE 353 Microcontrollers\\FinalProject\\dist\\ece353_base_project.AXF" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.

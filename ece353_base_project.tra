@@ -15,7 +15,7 @@
 ### ADS-LD Output File: 'ece353_base_project.axf'
 ### ADS-LD Command File: 'ece353_base_project.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'ece353_base_project.lnp', Handle=0x00000880
+### Creating CmdFile 'ece353_base_project.lnp', Handle=0x00000784
 ### Writing '.lnp' file
 ### ADS-LD Command file 'ece353_base_project.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
